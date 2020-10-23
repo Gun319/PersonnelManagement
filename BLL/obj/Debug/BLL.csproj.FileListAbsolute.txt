@@ -1,0 +1,15 @@
+E:\ASP.net\PersonnelManagement\BLL\bin\Debug\BLL.dll
+E:\ASP.net\PersonnelManagement\BLL\bin\Debug\BLL.pdb
+E:\ASP.net\PersonnelManagement\BLL\bin\Debug\DAL.dll
+E:\ASP.net\PersonnelManagement\BLL\bin\Debug\Model.dll
+E:\ASP.net\PersonnelManagement\BLL\bin\Debug\EntityFramework.dll
+E:\ASP.net\PersonnelManagement\BLL\bin\Debug\DAL.pdb
+E:\ASP.net\PersonnelManagement\BLL\bin\Debug\Model.pdb
+E:\ASP.net\PersonnelManagement\BLL\bin\Debug\Model.dll.config
+E:\ASP.net\PersonnelManagement\BLL\bin\Debug\EntityFramework.xml
+E:\ASP.net\PersonnelManagement\BLL\bin\Debug\zh-Hans\EntityFramework.resources.dll
+E:\ASP.net\PersonnelManagement\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
+E:\ASP.net\PersonnelManagement\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+E:\ASP.net\PersonnelManagement\BLL\obj\Debug\BLL.csproj.CopyComplete
+E:\ASP.net\PersonnelManagement\BLL\obj\Debug\BLL.dll
+E:\ASP.net\PersonnelManagement\BLL\obj\Debug\BLL.pdb

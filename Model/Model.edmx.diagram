@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="20af1881ba55419e90dfb3d71713a973" Name="Diagram1">
+        <EntityTypeShape EntityType="PersonnelManagementDBModel.Assessment" Width="1.5" PointX="3" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PersonnelManagementDBModel.AttendanceSheet" Width="1.5" PointX="3" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PersonnelManagementDBModel.CategoryItems" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PersonnelManagementDBModel.Department" Width="1.5" PointX="5.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PersonnelManagementDBModel.Leave" Width="1.5" PointX="3" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PersonnelManagementDBModel.Notice" Width="1.5" PointX="3" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="PersonnelManagementDBModel.Overtime" Width="1.5" PointX="3" PointY="18.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PersonnelManagementDBModel.PayRise" Width="1.5" PointX="3" PointY="22.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PersonnelManagementDBModel.PaySlip" Width="1.5" PointX="5.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PersonnelManagementDBModel.Role" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PersonnelManagementDBModel.Salary" Width="1.5" PointX="3" PointY="25.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PersonnelManagementDBModel.SystemLog" Width="1.5" PointX="3" PointY="29.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PersonnelManagementDBModel.UserInfo" Width="1.5" PointX="0.75" PointY="13.75" IsExpanded="true" />
+        <AssociationConnector Association="PersonnelManagementDBModel.FK__Assessmen__UserI__3D5E1FD2" ManuallyRouted="false" />
+        <AssociationConnector Association="PersonnelManagementDBModel.FK__Attendanc__UserI__403A8C7D" ManuallyRouted="false" />
+        <AssociationConnector Association="PersonnelManagementDBModel.FK__Leave__UserID__44FF419A" ManuallyRouted="false" />
+        <AssociationConnector Association="PersonnelManagementDBModel.FK__Notice__UserID__47DBAE45" ManuallyRouted="false" />
+        <AssociationConnector Association="PersonnelManagementDBModel.FK__Overtime__UserID__4AB81AF0" ManuallyRouted="false" />
+        <AssociationConnector Association="PersonnelManagementDBModel.FK__PayRise__UserID__4D94879B" ManuallyRouted="false" />
+        <AssociationConnector Association="PersonnelManagementDBModel.FK__Salary__UserID__5070F446" ManuallyRouted="false" />
+        <AssociationConnector Association="PersonnelManagementDBModel.FK__SystemLog__UserI__5535A963" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

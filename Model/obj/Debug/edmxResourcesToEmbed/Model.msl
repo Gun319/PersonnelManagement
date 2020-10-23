@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PersonnelManagementDBModelStoreContainer" CdmEntityContainer="PersonnelManagementDBEntities">
+    <EntitySetMapping Name="Assessment">
+      <EntityTypeMapping TypeName="PersonnelManagementDBModel.Assessment">
+        <MappingFragment StoreEntitySet="Assessment">
+          <ScalarProperty Name="AssessmentID" ColumnName="AssessmentID" />
+          <ScalarProperty Name="PerformanceTime" ColumnName="PerformanceTime" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="WorkSummary" ColumnName="WorkSummary" />
+          <ScalarProperty Name="UpperGoal" ColumnName="UpperGoal" />
+          <ScalarProperty Name="CompletionDegree" ColumnName="CompletionDegree" />
+          <ScalarProperty Name="ExaminationItems" ColumnName="ExaminationItems" />
+          <ScalarProperty Name="NextStageObjectives" ColumnName="NextStageObjectives" />
+          <ScalarProperty Name="PerformanceScore" ColumnName="PerformanceScore" />
+          <ScalarProperty Name="comments" ColumnName="comments" />
+          <ScalarProperty Name="perstate" ColumnName="perstate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AttendanceSheet">
+      <EntityTypeMapping TypeName="PersonnelManagementDBModel.AttendanceSheet">
+        <MappingFragment StoreEntitySet="AttendanceSheet">
+          <ScalarProperty Name="AttendanceID" ColumnName="AttendanceID" />
+          <ScalarProperty Name="AttendanceStartTime" ColumnName="AttendanceStartTime" />
+          <ScalarProperty Name="AttendanceType" ColumnName="AttendanceType" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="ClockTime" ColumnName="ClockTime" />
+          <ScalarProperty Name="ClockOutTime" ColumnName="ClockOutTime" />
+          <ScalarProperty Name="Workinghours" ColumnName="Workinghours" />
+          <ScalarProperty Name="remake" ColumnName="remake" />
+          <ScalarProperty Name="Late" ColumnName="Late" />
+          <ScalarProperty Name="Absenteeism" ColumnName="Absenteeism" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CategoryItems">
+      <EntityTypeMapping TypeName="PersonnelManagementDBModel.CategoryItems">
+        <MappingFragment StoreEntitySet="CategoryItems">
+          <ScalarProperty Name="CID" ColumnName="CID" />
+          <ScalarProperty Name="C_Category" ColumnName="C_Category" />
+          <ScalarProperty Name="CI_ID" ColumnName="CI_ID" />
+          <ScalarProperty Name="CI_Name" ColumnName="CI_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Department">
+      <EntityTypeMapping TypeName="PersonnelManagementDBModel.Department">
+        <MappingFragment StoreEntitySet="Department">
+          <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+          <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+          <ScalarProperty Name="DepartmentRemarks" ColumnName="DepartmentRemarks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Leave">
+      <EntityTypeMapping TypeName="PersonnelManagementDBModel.Leave">
+        <MappingFragment StoreEntitySet="Leave">
+          <ScalarProperty Name="LeaveID" ColumnName="LeaveID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="LeaveState" ColumnName="LeaveState" />
+          <ScalarProperty Name="LeaveTime" ColumnName="LeaveTime" />
+          <ScalarProperty Name="LeaveStartTime" ColumnName="LeaveStartTime" />
+          <ScalarProperty Name="LeaveEndTime" ColumnName="LeaveEndTime" />
+          <ScalarProperty Name="LeaveHalfDay" ColumnName="LeaveHalfDay" />
+          <ScalarProperty Name="LeaveDays" ColumnName="LeaveDays" />
+          <ScalarProperty Name="LeaveReason" ColumnName="LeaveReason" />
+          <ScalarProperty Name="ApproverID" ColumnName="ApproverID" />
+          <ScalarProperty Name="ApprovalTime" ColumnName="ApprovalTime" />
+          <ScalarProperty Name="ApproverReason" ColumnName="ApproverReason" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Notice">
+      <EntityTypeMapping TypeName="PersonnelManagementDBModel.Notice">
+        <MappingFragment StoreEntitySet="Notice">
+          <ScalarProperty Name="NoticeID" ColumnName="NoticeID" />
+          <ScalarProperty Name="NoticeType" ColumnName="NoticeType" />
+          <ScalarProperty Name="NoticeTitle" ColumnName="NoticeTitle" />
+          <ScalarProperty Name="NoticeContent" ColumnName="NoticeContent" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="NoticeStateTime" ColumnName="NoticeStateTime" />
+          <ScalarProperty Name="NoticeEndTime" ColumnName="NoticeEndTime" />
+          <ScalarProperty Name="NoticeState" ColumnName="NoticeState" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Overtime">
+      <EntityTypeMapping TypeName="PersonnelManagementDBModel.Overtime">
+        <MappingFragment StoreEntitySet="Overtime">
+          <ScalarProperty Name="OvertimeID" ColumnName="OvertimeID" />
+          <ScalarProperty Name="OvertimeStateTime" ColumnName="OvertimeStateTime" />
+          <ScalarProperty Name="OvertimeEndTime" ColumnName="OvertimeEndTime" />
+          <ScalarProperty Name="OvertimeDuration" ColumnName="OvertimeDuration" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="ApplyTime" ColumnName="ApplyTime" />
+          <ScalarProperty Name="OvertimeState" ColumnName="OvertimeState" />
+          <ScalarProperty Name="ApproverReason" ColumnName="ApproverReason" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PayRise">
+      <EntityTypeMapping TypeName="PersonnelManagementDBModel.PayRise">
+        <MappingFragment StoreEntitySet="PayRise">
+          <ScalarProperty Name="PayRiseID" ColumnName="PayRiseID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="PayRiseMoney" ColumnName="PayRiseMoney" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+          <ScalarProperty Name="ApplicationTime" ColumnName="ApplicationTime" />
+          <ScalarProperty Name="ApprovalContent" ColumnName="ApprovalContent" />
+          <ScalarProperty Name="ApprovalState" ColumnName="ApprovalState" />
+          <ScalarProperty Name="ApprovalTime" ColumnName="ApprovalTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PaySlip">
+      <EntityTypeMapping TypeName="PersonnelManagementDBModel.PaySlip">
+        <MappingFragment StoreEntitySet="PaySlip">
+          <ScalarProperty Name="PaySlipID" ColumnName="PaySlipID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Prize" ColumnName="Prize" />
+          <ScalarProperty Name="LeaveMoney" ColumnName="LeaveMoney" />
+          <ScalarProperty Name="OvertimeMoney" ColumnName="OvertimeMoney" />
+          <ScalarProperty Name="LateMoney" ColumnName="LateMoney" />
+          <ScalarProperty Name="AdvanceMoney" ColumnName="AdvanceMoney" />
+          <ScalarProperty Name="Absence" ColumnName="Absence" />
+          <ScalarProperty Name="Fine" ColumnName="Fine" />
+          <ScalarProperty Name="Sa_Bonus" ColumnName="Sa_Bonus" />
+          <ScalarProperty Name="Sa_Time" ColumnName="Sa_Time" />
+          <ScalarProperty Name="Sa_TotalSalary" ColumnName="Sa_TotalSalary" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Role">
+      <EntityTypeMapping TypeName="PersonnelManagementDBModel.Role">
+        <MappingFragment StoreEntitySet="Role">
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="RoleNumber" ColumnName="RoleNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Salary">
+      <EntityTypeMapping TypeName="PersonnelManagementDBModel.Salary">
+        <MappingFragment StoreEntitySet="Salary">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="BasicSalary" ColumnName="BasicSalary" />
+          <ScalarProperty Name="AttendanceBonus" ColumnName="AttendanceBonus" />
+          <ScalarProperty Name="Fine" ColumnName="Fine" />
+          <ScalarProperty Name="SalaryTime" ColumnName="SalaryTime" />
+          <ScalarProperty Name="SalarySum" ColumnName="SalarySum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SystemLog">
+      <EntityTypeMapping TypeName="PersonnelManagementDBModel.SystemLog">
+        <MappingFragment StoreEntitySet="SystemLog">
+          <ScalarProperty Name="LogID" ColumnName="LogID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="LogTime" ColumnName="LogTime" />
+          <ScalarProperty Name="LogOperation" ColumnName="LogOperation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserInfo">
+      <EntityTypeMapping TypeName="PersonnelManagementDBModel.UserInfo">
+        <MappingFragment StoreEntitySet="UserInfo">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="UserNumber" ColumnName="UserNumber" />
+          <ScalarProperty Name="LoginName" ColumnName="LoginName" />
+          <ScalarProperty Name="LoginPwd" ColumnName="LoginPwd" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserAge" ColumnName="UserAge" />
+          <ScalarProperty Name="UserSex" ColumnName="UserSex" />
+          <ScalarProperty Name="UserTel" ColumnName="UserTel" />
+          <ScalarProperty Name="UserAddress" ColumnName="UserAddress" />
+          <ScalarProperty Name="UserIphone" ColumnName="UserIphone" />
+          <ScalarProperty Name="UserRemarks" ColumnName="UserRemarks" />
+          <ScalarProperty Name="UserStatr" ColumnName="UserStatr" />
+          <ScalarProperty Name="EntryTime" ColumnName="EntryTime" />
+          <ScalarProperty Name="DimissionTime" ColumnName="DimissionTime" />
+          <ScalarProperty Name="BasePay" ColumnName="BasePay" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

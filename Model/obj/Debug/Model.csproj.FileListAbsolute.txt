@@ -1,0 +1,13 @@
+E:\ASP.net\PersonnelManagement\Model\bin\Debug\Model.dll.config
+E:\ASP.net\PersonnelManagement\Model\bin\Debug\Model.dll
+E:\ASP.net\PersonnelManagement\Model\bin\Debug\Model.pdb
+E:\ASP.net\PersonnelManagement\Model\bin\Debug\EntityFramework.dll
+E:\ASP.net\PersonnelManagement\Model\bin\Debug\EntityFramework.SqlServer.dll
+E:\ASP.net\PersonnelManagement\Model\bin\Debug\EntityFramework.xml
+E:\ASP.net\PersonnelManagement\Model\bin\Debug\EntityFramework.SqlServer.xml
+E:\ASP.net\PersonnelManagement\Model\bin\Debug\zh-Hans\EntityFramework.resources.dll
+E:\ASP.net\PersonnelManagement\Model\obj\Debug\Model.csprojAssemblyReference.cache
+E:\ASP.net\PersonnelManagement\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+E:\ASP.net\PersonnelManagement\Model\obj\Debug\Model.csproj.CopyComplete
+E:\ASP.net\PersonnelManagement\Model\obj\Debug\Model.dll
+E:\ASP.net\PersonnelManagement\Model\obj\Debug\Model.pdb

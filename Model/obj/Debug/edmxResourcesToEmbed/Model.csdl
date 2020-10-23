@@ -1,0 +1,350 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PersonnelManagementDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Assessment">
+    <Key>
+      <PropertyRef Name="AssessmentID" />
+    </Key>
+    <Property Name="AssessmentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PerformanceTime" Type="DateTime" Precision="3" />
+    <Property Name="UserID" Type="Int32" />
+    <Property Name="WorkSummary" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="UpperGoal" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CompletionDegree" Type="Double" />
+    <Property Name="ExaminationItems" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="NextStageObjectives" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PerformanceScore" Type="Double" />
+    <Property Name="comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="perstate" Type="Int32" />
+    <NavigationProperty Name="UserInfo" Relationship="Self.FK__Assessmen__UserI__3D5E1FD2" FromRole="Assessment" ToRole="UserInfo" />
+  </EntityType>
+  <EntityType Name="AttendanceSheet">
+    <Key>
+      <PropertyRef Name="AttendanceID" />
+    </Key>
+    <Property Name="AttendanceID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AttendanceStartTime" Type="DateTime" Precision="3" />
+    <Property Name="AttendanceType" Type="Int32" />
+    <Property Name="UserID" Type="Int32" />
+    <Property Name="ClockTime" Type="DateTime" Precision="3" />
+    <Property Name="ClockOutTime" Type="DateTime" Precision="3" />
+    <Property Name="Workinghours" Type="Int32" />
+    <Property Name="remake" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Late" Type="Int32" />
+    <Property Name="Absenteeism" Type="Int32" />
+    <NavigationProperty Name="UserInfo" Relationship="Self.FK__Attendanc__UserI__403A8C7D" FromRole="AttendanceSheet" ToRole="UserInfo" />
+  </EntityType>
+  <EntityType Name="CategoryItems">
+    <Key>
+      <PropertyRef Name="CID" />
+    </Key>
+    <Property Name="CID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="C_Category" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CI_ID" Type="Int32" />
+    <Property Name="CI_Name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Department">
+    <Key>
+      <PropertyRef Name="DepartmentID" />
+    </Key>
+    <Property Name="DepartmentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DepartmentName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DepartmentRemarks" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Leave">
+    <Key>
+      <PropertyRef Name="LeaveID" />
+    </Key>
+    <Property Name="LeaveID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" />
+    <Property Name="LeaveState" Type="Int32" />
+    <Property Name="LeaveTime" Type="DateTime" Precision="3" />
+    <Property Name="LeaveStartTime" Type="DateTime" Precision="3" />
+    <Property Name="LeaveEndTime" Type="DateTime" Precision="3" />
+    <Property Name="LeaveHalfDay" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="LeaveDays" Type="Int32" />
+    <Property Name="LeaveReason" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="ApproverID" Type="Int32" />
+    <Property Name="ApprovalTime" Type="DateTime" Precision="3" />
+    <Property Name="ApproverReason" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="UserInfo" Relationship="Self.FK__Leave__UserID__44FF419A" FromRole="Leave" ToRole="UserInfo" />
+  </EntityType>
+  <EntityType Name="Notice">
+    <Key>
+      <PropertyRef Name="NoticeID" />
+    </Key>
+    <Property Name="NoticeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NoticeType" Type="Int32" />
+    <Property Name="NoticeTitle" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="NoticeContent" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="UserID" Type="Int32" />
+    <Property Name="NoticeStateTime" Type="DateTime" Precision="3" />
+    <Property Name="NoticeEndTime" Type="DateTime" Precision="3" />
+    <Property Name="NoticeState" Type="Int32" />
+    <NavigationProperty Name="UserInfo" Relationship="Self.FK__Notice__UserID__47DBAE45" FromRole="Notice" ToRole="UserInfo" />
+  </EntityType>
+  <EntityType Name="Overtime">
+    <Key>
+      <PropertyRef Name="OvertimeID" />
+    </Key>
+    <Property Name="OvertimeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OvertimeStateTime" Type="DateTime" Precision="3" />
+    <Property Name="OvertimeEndTime" Type="DateTime" Precision="3" />
+    <Property Name="OvertimeDuration" Type="Int32" />
+    <Property Name="UserID" Type="Int32" />
+    <Property Name="ApplyTime" Type="DateTime" Precision="3" />
+    <Property Name="OvertimeState" Type="Int32" />
+    <Property Name="ApproverReason" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="UserInfo" Relationship="Self.FK__Overtime__UserID__4AB81AF0" FromRole="Overtime" ToRole="UserInfo" />
+  </EntityType>
+  <EntityType Name="PayRise">
+    <Key>
+      <PropertyRef Name="PayRiseID" />
+    </Key>
+    <Property Name="PayRiseID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" />
+    <Property Name="PayRiseMoney" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Reason" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ApplicationTime" Type="DateTime" Precision="3" />
+    <Property Name="ApprovalContent" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ApprovalState" Type="Int32" />
+    <Property Name="ApprovalTime" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="UserInfo" Relationship="Self.FK__PayRise__UserID__4D94879B" FromRole="PayRise" ToRole="UserInfo" />
+  </EntityType>
+  <EntityType Name="PaySlip">
+    <Key>
+      <PropertyRef Name="PaySlipID" />
+    </Key>
+    <Property Name="PaySlipID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" />
+    <Property Name="Prize" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="LeaveMoney" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="OvertimeMoney" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="LateMoney" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="AdvanceMoney" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Absence" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Fine" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Sa_Bonus" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Sa_Time" Type="DateTime" Precision="3" />
+    <Property Name="Sa_TotalSalary" Type="Decimal" Precision="19" Scale="4" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="RoleID" />
+    </Key>
+    <Property Name="RoleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RoleName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RoleNumber" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Salary">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" />
+    <Property Name="BasicSalary" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="AttendanceBonus" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Fine" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="SalaryTime" Type="DateTime" Precision="3" />
+    <Property Name="SalarySum" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="UserInfo" Relationship="Self.FK__Salary__UserID__5070F446" FromRole="Salary" ToRole="UserInfo" />
+  </EntityType>
+  <EntityType Name="SystemLog">
+    <Key>
+      <PropertyRef Name="LogID" />
+    </Key>
+    <Property Name="LogID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" />
+    <Property Name="LogTime" Type="DateTime" Precision="3" />
+    <Property Name="LogOperation" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="UserInfo" Relationship="Self.FK__SystemLog__UserI__5535A963" FromRole="SystemLog" ToRole="UserInfo" />
+  </EntityType>
+  <EntityType Name="UserInfo">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DepartmentID" Type="Int32" />
+    <Property Name="RoleID" Type="Int32" />
+    <Property Name="UserNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LoginName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LoginPwd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UserAge" Type="Int32" />
+    <Property Name="UserSex" Type="Byte" />
+    <Property Name="UserTel" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="UserAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="UserIphone" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="UserRemarks" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="UserStatr" Type="Int32" />
+    <Property Name="EntryTime" Type="DateTime" Precision="3" />
+    <Property Name="DimissionTime" Type="DateTime" Precision="3" />
+    <Property Name="BasePay" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="Assessment" Relationship="Self.FK__Assessmen__UserI__3D5E1FD2" FromRole="UserInfo" ToRole="Assessment" />
+    <NavigationProperty Name="AttendanceSheet" Relationship="Self.FK__Attendanc__UserI__403A8C7D" FromRole="UserInfo" ToRole="AttendanceSheet" />
+    <NavigationProperty Name="Leave" Relationship="Self.FK__Leave__UserID__44FF419A" FromRole="UserInfo" ToRole="Leave" />
+    <NavigationProperty Name="Notice" Relationship="Self.FK__Notice__UserID__47DBAE45" FromRole="UserInfo" ToRole="Notice" />
+    <NavigationProperty Name="Overtime" Relationship="Self.FK__Overtime__UserID__4AB81AF0" FromRole="UserInfo" ToRole="Overtime" />
+    <NavigationProperty Name="PayRise" Relationship="Self.FK__PayRise__UserID__4D94879B" FromRole="UserInfo" ToRole="PayRise" />
+    <NavigationProperty Name="Salary" Relationship="Self.FK__Salary__UserID__5070F446" FromRole="UserInfo" ToRole="Salary" />
+    <NavigationProperty Name="SystemLog" Relationship="Self.FK__SystemLog__UserI__5535A963" FromRole="UserInfo" ToRole="SystemLog" />
+  </EntityType>
+  <Association Name="FK__Assessmen__UserI__3D5E1FD2">
+    <End Role="UserInfo" Type="Self.UserInfo" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Assessment" Type="Self.Assessment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserInfo">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Assessment">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Attendanc__UserI__403A8C7D">
+    <End Role="UserInfo" Type="Self.UserInfo" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AttendanceSheet" Type="Self.AttendanceSheet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserInfo">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="AttendanceSheet">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Leave__UserID__44FF419A">
+    <End Role="UserInfo" Type="Self.UserInfo" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Leave" Type="Self.Leave" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserInfo">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Leave">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Notice__UserID__47DBAE45">
+    <End Role="UserInfo" Type="Self.UserInfo" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Notice" Type="Self.Notice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserInfo">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Notice">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Overtime__UserID__4AB81AF0">
+    <End Role="UserInfo" Type="Self.UserInfo" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Overtime" Type="Self.Overtime" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserInfo">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Overtime">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PayRise__UserID__4D94879B">
+    <End Role="UserInfo" Type="Self.UserInfo" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="PayRise" Type="Self.PayRise" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserInfo">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="PayRise">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Salary__UserID__5070F446">
+    <End Role="UserInfo" Type="Self.UserInfo" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Salary" Type="Self.Salary" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserInfo">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Salary">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SystemLog__UserI__5535A963">
+    <End Role="UserInfo" Type="Self.UserInfo" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="SystemLog" Type="Self.SystemLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserInfo">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="SystemLog">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="PersonnelManagementDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Assessment" EntityType="Self.Assessment" />
+    <EntitySet Name="AttendanceSheet" EntityType="Self.AttendanceSheet" />
+    <EntitySet Name="CategoryItems" EntityType="Self.CategoryItems" />
+    <EntitySet Name="Department" EntityType="Self.Department" />
+    <EntitySet Name="Leave" EntityType="Self.Leave" />
+    <EntitySet Name="Notice" EntityType="Self.Notice" />
+    <EntitySet Name="Overtime" EntityType="Self.Overtime" />
+    <EntitySet Name="PayRise" EntityType="Self.PayRise" />
+    <EntitySet Name="PaySlip" EntityType="Self.PaySlip" />
+    <EntitySet Name="Role" EntityType="Self.Role" />
+    <EntitySet Name="Salary" EntityType="Self.Salary" />
+    <EntitySet Name="SystemLog" EntityType="Self.SystemLog" />
+    <EntitySet Name="UserInfo" EntityType="Self.UserInfo" />
+    <AssociationSet Name="FK__Assessmen__UserI__3D5E1FD2" Association="Self.FK__Assessmen__UserI__3D5E1FD2">
+      <End Role="UserInfo" EntitySet="UserInfo" />
+      <End Role="Assessment" EntitySet="Assessment" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Attendanc__UserI__403A8C7D" Association="Self.FK__Attendanc__UserI__403A8C7D">
+      <End Role="UserInfo" EntitySet="UserInfo" />
+      <End Role="AttendanceSheet" EntitySet="AttendanceSheet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Leave__UserID__44FF419A" Association="Self.FK__Leave__UserID__44FF419A">
+      <End Role="UserInfo" EntitySet="UserInfo" />
+      <End Role="Leave" EntitySet="Leave" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Notice__UserID__47DBAE45" Association="Self.FK__Notice__UserID__47DBAE45">
+      <End Role="UserInfo" EntitySet="UserInfo" />
+      <End Role="Notice" EntitySet="Notice" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Overtime__UserID__4AB81AF0" Association="Self.FK__Overtime__UserID__4AB81AF0">
+      <End Role="UserInfo" EntitySet="UserInfo" />
+      <End Role="Overtime" EntitySet="Overtime" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PayRise__UserID__4D94879B" Association="Self.FK__PayRise__UserID__4D94879B">
+      <End Role="UserInfo" EntitySet="UserInfo" />
+      <End Role="PayRise" EntitySet="PayRise" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Salary__UserID__5070F446" Association="Self.FK__Salary__UserID__5070F446">
+      <End Role="UserInfo" EntitySet="UserInfo" />
+      <End Role="Salary" EntitySet="Salary" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SystemLog__UserI__5535A963" Association="Self.FK__SystemLog__UserI__5535A963">
+      <End Role="UserInfo" EntitySet="UserInfo" />
+      <End Role="SystemLog" EntitySet="SystemLog" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
