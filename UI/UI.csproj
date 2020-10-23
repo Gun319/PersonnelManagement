@@ -92,6 +92,9 @@
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserLoginHandler.ashx.cs">
+      <DependentUpon>UserLoginHandler.ashx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Bootstrap\bootstrap-grid.css.map" />
@@ -105,6 +108,7 @@
     <Content Include="script\BootstrapJS\bootstrap.bundle.min.js.map" />
     <Content Include="script\BootstrapJS\bootstrap.js.map" />
     <Content Include="script\BootstrapJS\bootstrap.min.js.map" />
+    <Content Include="UserLoginHandler.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

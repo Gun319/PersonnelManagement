@@ -65,3 +65,5 @@ E:\ASP.net\PersonnelManagement\UI\obj\Debug\UI.csproj.CoreCompileInputs.cache
 E:\ASP.net\PersonnelManagement\UI\obj\Debug\UI.csproj.CopyComplete
 E:\ASP.net\PersonnelManagement\UI\obj\Debug\UI.dll
 E:\ASP.net\PersonnelManagement\UI\obj\Debug\UI.pdb
+E:\ASP.net\PersonnelManagement\UI\bin\DAL.dll
+E:\ASP.net\PersonnelManagement\UI\bin\DAL.pdb
