@@ -374,3 +374,5 @@ select * from Role
 select * from Salary
 select * from SystemLog
 select * from UserInfo
+
+--select LoginName,LoginPwd from UserInfo where LoginName=@LoginName and LoginPwd=@LoginPwd

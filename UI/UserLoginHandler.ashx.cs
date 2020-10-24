@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Web;
-using System.Web.SessionState;
+using System.Web.SessionState; //Session读写
+using System.Web.Script.Serialization;
+using Model;
+using System.Text;
 
 namespace UI
 {
@@ -19,9 +22,16 @@ namespace UI
             //context.Response.Write("Hello World");
 
             if (context.Request["type"] == "login")
+            {
                 UserLogin(context);
+                return;
+            }
+
             if (context.Request["type"] == "cookie")
+            {
                 GetCookie(context);
+                return;
+            }
         }
 
         /// <summary>
@@ -45,8 +55,18 @@ namespace UI
                 context.Session["UserName"] = dt.Rows[0]["UserName"];
                 string RoleID = dt.Rows[0]["RoleID"].ToString();
 
+                //登录名、密码匹配成功 返回状态和用户角色信息
+                List<Info> roles = new List<Info>();
+                Info role = new Info()
+                {
+                    code = 200,
+                    RoleID = RoleID
+                };
+                roles.Add(role);
+                JavaScriptSerializer jss = new JavaScriptSerializer();
+                string json = jss.Serialize(roles);
 
-                context.Response.Write(new { code = 200, RoleID });
+                context.Response.Write(json);
             }
             else
             {
@@ -67,8 +87,8 @@ namespace UI
             {
                 //实例化Cookie对象
                 HttpCookie user = new HttpCookie("User");
-                //设置该对象的key值
-                user.Values["name"] = dt.Rows[0]["LoginName"].ToString();
+                //设置该对象的key值                                     对登录名进行编码存储，以防止中文乱码       
+                user.Values["name"] = HttpUtility.UrlEncode(dt.Rows[0]["LoginName"].ToString(), Encoding.GetEncoding("UTF-8"));
                 user.Values["pwd"] = dt.Rows[0]["LoginPwd"].ToString();
                 //设置过期时间
                 user.Expires = DateTime.Now.AddDays(7);
@@ -93,13 +113,26 @@ namespace UI
         /// <returns></returns>
         public void GetCookie(HttpContext context)
         {
-            int code = 201;
             var user = context.Request.Cookies["User"];
             if (user != null)
             {
-                code = 200;
+                List<Info> nameAndePwd = new List<Info>();
+                Info nameAndepwd = new Info()
+                {
+                    code = 200,
+                    uName = user["name"],
+                    uPwd = user["pwd"],
+                };
+                nameAndePwd.Add(nameAndepwd);
+                JavaScriptSerializer jss = new JavaScriptSerializer();
+                string json = jss.Serialize(nameAndePwd);
+
+                context.Response.Write(json);
             }
-            context.Response.Write(code);
+            else
+            {
+                context.Response.Write(201);
+            }
         }
 
         public bool IsReusable

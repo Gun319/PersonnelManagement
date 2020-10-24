@@ -73,8 +73,10 @@
     <Content Include="Content\Bootstrap\bootstrap-reboot.min.css" />
     <Content Include="Content\Bootstrap\bootstrap.css" />
     <Content Include="Content\Bootstrap\bootstrap.min.css" />
+    <Content Include="Content\css\Login.css" />
     <Content Include="Content\images\Login\bk-login.png" />
     <Content Include="Login.aspx" />
+    <Content Include="script\Login.js" />
     <Content Include="title.ico" />
     <Content Include="script\BootstrapJS\bootstrap.bundle.js" />
     <Content Include="script\BootstrapJS\bootstrap.bundle.min.js" />
@@ -126,9 +128,7 @@
       <Name>Model</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Content\css\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
