@@ -73,9 +73,57 @@
     <Content Include="Content\Bootstrap\bootstrap-reboot.min.css" />
     <Content Include="Content\Bootstrap\bootstrap.css" />
     <Content Include="Content\Bootstrap\bootstrap.min.css" />
+    <Content Include="Content\css\css\bootstrap-responsive.min.css" />
+    <Content Include="Content\css\css\bootstrap-wysihtml5.css" />
+    <Content Include="Content\css\css\bootstrap.min.css" />
+    <Content Include="Content\css\css\colorpicker.css" />
+    <Content Include="Content\css\css\datepicker.css" />
+    <Content Include="Content\css\css\font-awesome\css\font-awesome.css" />
+    <Content Include="Content\css\css\fonts.googleapis.css" />
+    <Content Include="Content\css\css\fullcalendar.css" />
+    <Content Include="Content\css\css\jquery.gritter.css" />
+    <Content Include="Content\css\css\matrix-login.css" />
+    <Content Include="Content\css\css\matrix-media.css" />
+    <Content Include="Content\css\css\matrix-style.css" />
+    <Content Include="Content\css\css\select2.css" />
     <Content Include="Content\css\Login.css" />
-    <Content Include="Content\images\Login\bk-login.png" />
+    <Content Include="images\backgrounds\calActiveBg.html" />
+    <Content Include="images\gallery\imgbox3.html" />
+    <Content Include="img\alpha.html" />
+    <Content Include="img\breadcrumb.png" />
+    <Content Include="img\demo\av1.jpg" />
+    <Content Include="img\demo\av2.jpg" />
+    <Content Include="img\demo\av3.jpg" />
+    <Content Include="img\demo\av4.jpg" />
+    <Content Include="img\demo\av5.jpg" />
+    <Content Include="img\demo\demo-image1.jpg" />
+    <Content Include="img\demo\demo-image2.jpg" />
+    <Content Include="img\demo\demo-image3.jpg" />
+    <Content Include="img\gallery\imgbox1.jpg" />
+    <Content Include="img\gallery\imgbox2.jpg" />
+    <Content Include="img\gallery\imgbox3.jpg" />
+    <Content Include="img\gallery\imgbox4.jpg" />
+    <Content Include="img\gallery\imgbox5.jpg" />
+    <Content Include="img\glyphicons-halflings-white.png" />
+    <Content Include="img\glyphicons-halflings.html" />
+    <Content Include="img\gritter.png" />
+    <Content Include="img\hue.png" />
+    <Content Include="img\larrow.png" />
+    <Content Include="img\line.png" />
+    <Content Include="img\Login\bk-login.png" />
+    <Content Include="img\logo.png" />
+    <Content Include="img\menu-active.png" />
+    <Content Include="img\rarrow.png" />
+    <Content Include="img\saturation.png" />
+    <Content Include="img\select2.png" />
+    <Content Include="img\spinner.gif" />
+    <Content Include="img\sprite.png" />
+    <Content Include="Fram.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="script\js\bootstrap.min.js" />
+    <Content Include="script\js\jquery.min.js" />
+    <Content Include="script\js\jquery.ui.custom.js" />
+    <Content Include="script\js\matrix.js" />
     <Content Include="script\Login.js" />
     <Content Include="title.ico" />
     <Content Include="script\BootstrapJS\bootstrap.bundle.js" />
@@ -86,6 +134,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Fram.aspx.cs">
+      <DependentUpon>Fram.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Fram.aspx.designer.cs">
+      <DependentUpon>Fram.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -105,6 +160,10 @@
     <Content Include="Content\Bootstrap\bootstrap-reboot.min.css.map" />
     <Content Include="Content\Bootstrap\bootstrap.css.map" />
     <Content Include="Content\Bootstrap\bootstrap.min.css.map" />
+    <Content Include="Content\css\css\font-awesome\font\fontawesome-webfont.eot" />
+    <Content Include="Content\css\css\font-awesome\font\fontawesome-webfont.eot%40" />
+    <Content Include="Content\css\css\font-awesome\font\fontawesome-webfont.ttf" />
+    <Content Include="Content\css\css\font-awesome\font\fontawesome-webfont.woff" />
     <None Include="packages.config" />
     <Content Include="script\BootstrapJS\bootstrap.bundle.js.map" />
     <Content Include="script\BootstrapJS\bootstrap.bundle.min.js.map" />
