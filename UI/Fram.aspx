@@ -6,6 +6,7 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="title.ico" rel="icon" type="image/x-icon" />
     <title>XXX人事管理系统</title>
     <link href="Content/css/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="Content/css/css/bootstrap-responsive.min.css" />
@@ -15,8 +16,8 @@
     <link href="Content/css/css/font-awesome/css/font-awesome.css" rel="stylesheet" />
     <link href="Content/css/css/jquery.gritter.css" rel="stylesheet" />
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css' />
-</head>    
-<body> 
+</head>
+<body>
 
     <!--Header-part-->
     <div id="header">
@@ -47,7 +48,7 @@
                 <ul>
                     <li><a href="#" target="iframe_a">个人信息</a></li>
                     <li><a href="#" target="iframe_a">查询同事信息</a></li>
-                    <li><a href="#" target="iframe_a">员工管理</a></li>
+                    <li><a href="EmpManager.aspx" target="iframe_a">员工管理</a></li>
                 </ul>
             </li>
 
@@ -129,7 +130,7 @@
             <!-- 子页面内容 -->
 
             <%--scrolling="no"消除边框     height:calc(100vh) 获取屏幕高度 <100vh>屏幕高度100% --%>
-            <iframe src="DepartManager.aspx" name="iframe_a" style="border: 0; width: 100%; height: calc(100vh)"></iframe>
+            <iframe src="EmpManager.aspx" name="iframe_a" style="border: 0; width: 100%; height: calc(100vh)"></iframe>
         </div>
     </div>
 

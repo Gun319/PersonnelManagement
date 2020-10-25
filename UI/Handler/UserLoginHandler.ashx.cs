@@ -4,7 +4,7 @@ using System.Data;
 using System.Text;
 using System.Web;
 using System.Web.Script.Serialization;
-using System.Web.SessionState;
+using System.Web.SessionState; // 解决Session在一般处理程序中的读写问题
 using Model;
 
 namespace UI.Handler

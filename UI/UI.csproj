@@ -88,6 +88,7 @@
     <Content Include="Content\css\css\select2.css" />
     <Content Include="Content\css\Login.css" />
     <Content Include="DepartManager.aspx" />
+    <Content Include="EmpManager.aspx" />
     <Content Include="images\backgrounds\calActiveBg.html" />
     <Content Include="images\gallery\imgbox3.html" />
     <Content Include="img\alpha.html" />
@@ -109,6 +110,10 @@
     <Content Include="img\glyphicons-halflings.html" />
     <Content Include="img\gritter.png" />
     <Content Include="img\hue.png" />
+    <Content Include="img\ico\Add.png" />
+    <Content Include="img\ico\Del.png" />
+    <Content Include="img\ico\Search.png" />
+    <Content Include="img\ico\Update.png" />
     <Content Include="img\larrow.png" />
     <Content Include="img\line.png" />
     <Content Include="img\Login\bk-login.png" />
@@ -121,6 +126,7 @@
     <Content Include="img\sprite.png" />
     <Content Include="Fram.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="script\DepartManager.js" />
     <Content Include="script\js\bootstrap.min.js" />
     <Content Include="script\js\jquery.min.js" />
     <Content Include="script\js\jquery.ui.custom.js" />
@@ -135,6 +141,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EmpManager.aspx.cs">
+      <DependentUpon>EmpManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmpManager.aspx.designer.cs">
+      <DependentUpon>EmpManager.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Handler\DepartmentHandler.ashx.cs">
       <DependentUpon>DepartmentHandler.ashx</DependentUpon>
     </Compile>

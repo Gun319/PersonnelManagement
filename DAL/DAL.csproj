@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DepartmentDAL.cs" />
+    <Compile Include="EmpDAL.cs" />
     <Compile Include="Helper\DBHelper.cs" />
     <Compile Include="LoginDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
