@@ -27,7 +27,7 @@
     <div id="user-nav" class="navbar navbar-inverse">
         <ul class="nav">
             <li class=""><a title="" href="#"><i class="icon icon-cog"></i><span class="text">修改密码</span></a></li>
-            <li class=""><a title="" href="login.html"><i class="icon icon-share-alt"></i><span class="text">退出</span></a>
+            <li class=""><a title="" href="Login.aspx"><i class="icon icon-share-alt"></i><span class="text">退出</span></a>
             </li>
         </ul>
     </div>
@@ -69,7 +69,7 @@
             </li>
 
             <!-- 部门管理 -->
-            <li><a href="#"><i class="icon icon-cloud"></i><span>部门管理</span></a></li>
+            <li><a href="DepartManager.aspx" target="iframe_a"><i class="icon icon-cloud"></i><span>部门管理</span></a></li>
 
             <!-- 加班管理 -->
             <li class="submenu "><a href="#"><i class="icon icon-th"></i><span>加班管理</span></a>
@@ -129,7 +129,7 @@
             <!-- 子页面内容 -->
 
             <%--scrolling="no"消除边框     height:calc(100vh) 获取屏幕高度 <100vh>屏幕高度100% --%>
-            <iframe src="" name="iframe_a" style="border: 0; width: 100%; height: calc(100vh)"></iframe>
+            <iframe src="DepartManager.aspx" name="iframe_a" style="border: 0; width: 100%; height: calc(100vh)"></iframe>
         </div>
     </div>
 

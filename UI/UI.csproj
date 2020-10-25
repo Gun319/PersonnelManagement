@@ -87,6 +87,7 @@
     <Content Include="Content\css\css\matrix-style.css" />
     <Content Include="Content\css\css\select2.css" />
     <Content Include="Content\css\Login.css" />
+    <Content Include="DepartManager.aspx" />
     <Content Include="images\backgrounds\calActiveBg.html" />
     <Content Include="images\gallery\imgbox3.html" />
     <Content Include="img\alpha.html" />
@@ -134,6 +135,16 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DepartmentHandler.ashx.cs">
+      <DependentUpon>DepartmentHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="DepartManager.aspx.cs">
+      <DependentUpon>DepartManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DepartManager.aspx.designer.cs">
+      <DependentUpon>DepartManager.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Fram.aspx.cs">
       <DependentUpon>Fram.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -164,6 +175,7 @@
     <Content Include="Content\css\css\font-awesome\font\fontawesome-webfont.eot%40" />
     <Content Include="Content\css\css\font-awesome\font\fontawesome-webfont.ttf" />
     <Content Include="Content\css\css\font-awesome\font\fontawesome-webfont.woff" />
+    <Content Include="DepartmentHandler.ashx" />
     <None Include="packages.config" />
     <Content Include="script\BootstrapJS\bootstrap.bundle.js.map" />
     <Content Include="script\BootstrapJS\bootstrap.bundle.min.js.map" />

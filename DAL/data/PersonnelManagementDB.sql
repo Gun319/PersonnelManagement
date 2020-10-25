@@ -376,3 +376,8 @@ select * from SystemLog
 select * from UserInfo
 
 --select LoginName,LoginPwd from UserInfo where LoginName=@LoginName and LoginPwd=@LoginPwd
+--select DepartmentID,DepartmentName from Department
+--delete Department where DepartmentID =1
+--exec('delete Department where DepartmentID in (' +@DepartmentID+ ')')
+--select DepartmentName from Department where DepartmentName='行政部'
+insert into Department(DepartmentName,DepartmentRemarks) values('后勤部','')

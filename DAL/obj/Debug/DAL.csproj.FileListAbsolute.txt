@@ -11,3 +11,16 @@ E:\ASP.net\PersonnelManagement\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 E:\ASP.net\PersonnelManagement\DAL\obj\Debug\DAL.csproj.CopyComplete
 E:\ASP.net\PersonnelManagement\DAL\obj\Debug\DAL.dll
 E:\ASP.net\PersonnelManagement\DAL\obj\Debug\DAL.pdb
+D:\Study\School\Training\PersonalManagerment\PersonalManagerment\DAL\bin\Debug\DAL.dll
+D:\Study\School\Training\PersonalManagerment\PersonalManagerment\DAL\bin\Debug\DAL.pdb
+D:\Study\School\Training\PersonalManagerment\PersonalManagerment\DAL\bin\Debug\Model.dll
+D:\Study\School\Training\PersonalManagerment\PersonalManagerment\DAL\bin\Debug\EntityFramework.dll
+D:\Study\School\Training\PersonalManagerment\PersonalManagerment\DAL\bin\Debug\Model.pdb
+D:\Study\School\Training\PersonalManagerment\PersonalManagerment\DAL\bin\Debug\Model.dll.config
+D:\Study\School\Training\PersonalManagerment\PersonalManagerment\DAL\bin\Debug\EntityFramework.xml
+D:\Study\School\Training\PersonalManagerment\PersonalManagerment\DAL\bin\Debug\zh-Hans\EntityFramework.resources.dll
+D:\Study\School\Training\PersonalManagerment\PersonalManagerment\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+D:\Study\School\Training\PersonalManagerment\PersonalManagerment\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\Study\School\Training\PersonalManagerment\PersonalManagerment\DAL\obj\Debug\DAL.csproj.CopyComplete
+D:\Study\School\Training\PersonalManagerment\PersonalManagerment\DAL\obj\Debug\DAL.dll
+D:\Study\School\Training\PersonalManagerment\PersonalManagerment\DAL\obj\Debug\DAL.pdb

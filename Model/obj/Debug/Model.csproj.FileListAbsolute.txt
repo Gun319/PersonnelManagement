@@ -11,3 +11,16 @@ E:\ASP.net\PersonnelManagement\Model\obj\Debug\Model.csproj.CoreCompileInputs.ca
 E:\ASP.net\PersonnelManagement\Model\obj\Debug\Model.csproj.CopyComplete
 E:\ASP.net\PersonnelManagement\Model\obj\Debug\Model.dll
 E:\ASP.net\PersonnelManagement\Model\obj\Debug\Model.pdb
+D:\Study\School\Training\PersonalManagerment\PersonalManagerment\Model\bin\Debug\Model.dll.config
+D:\Study\School\Training\PersonalManagerment\PersonalManagerment\Model\bin\Debug\Model.dll
+D:\Study\School\Training\PersonalManagerment\PersonalManagerment\Model\bin\Debug\Model.pdb
+D:\Study\School\Training\PersonalManagerment\PersonalManagerment\Model\bin\Debug\EntityFramework.dll
+D:\Study\School\Training\PersonalManagerment\PersonalManagerment\Model\bin\Debug\EntityFramework.SqlServer.dll
+D:\Study\School\Training\PersonalManagerment\PersonalManagerment\Model\bin\Debug\EntityFramework.xml
+D:\Study\School\Training\PersonalManagerment\PersonalManagerment\Model\bin\Debug\EntityFramework.SqlServer.xml
+D:\Study\School\Training\PersonalManagerment\PersonalManagerment\Model\bin\Debug\zh-Hans\EntityFramework.resources.dll
+D:\Study\School\Training\PersonalManagerment\PersonalManagerment\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+D:\Study\School\Training\PersonalManagerment\PersonalManagerment\Model\obj\Debug\Model.csproj.CopyComplete
+D:\Study\School\Training\PersonalManagerment\PersonalManagerment\Model\obj\Debug\Model.dll
+D:\Study\School\Training\PersonalManagerment\PersonalManagerment\Model\obj\Debug\Model.pdb
+D:\Study\School\Training\PersonalManagerment\PersonalManagerment\Model\obj\Debug\Model.csprojAssemblyReference.cache
