@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Web;
-using System.Web.SessionState; //Session读写
-using System.Web.Script.Serialization;
-using Model;
 using System.Text;
+using System.Web;
+using System.Web.Script.Serialization;
+using System.Web.SessionState;
+using Model;
 
-namespace UI
+namespace UI.Handler
 {
     /// <summary>
     /// UserLoginHandler 的摘要说明

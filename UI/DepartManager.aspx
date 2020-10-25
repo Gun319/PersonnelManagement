@@ -123,7 +123,7 @@
     //查看部门信息
     function SelDept() {
         $.ajax({
-            url: "/DepartmentHandler.ashx",
+            url: "/Handler/DepartmentHandler.ashx",
             data: {
                 type: "dept",
             },
@@ -150,7 +150,7 @@
         });
         if (confirm("是否确定删除？")) {
             $.ajax({
-                url: "/DepartmentHandler.ashx",
+                url: "/Handler/DepartmentHandler.ashx",
                 data: {
                     type: "DelDept",
                     id: id
@@ -177,7 +177,7 @@
         var deptName = $("#deptName").val().trim();
         if (deptName.length != 0) {
             $.ajax({
-                url: "/DepartmentHandler.ashx",
+                url: "/Handler/DepartmentHandler.ashx",
                 data: {
                     type: "Adddept",
                     deptName: deptName

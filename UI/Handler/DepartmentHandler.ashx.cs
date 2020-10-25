@@ -2,20 +2,19 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.Web.Configuration;
 using System.Web.Script.Serialization;
 
-namespace UI.Ashx
+namespace UI.Handler
 {
     /// <summary>
     /// Department 的摘要说明
     /// </summary>
-    public class Department : IHttpHandler
+    public class DepartmentHandler : IHttpHandler
     {
 
         public void ProcessRequest(HttpContext context)
         {
-            if (context.Request["type"]== "dept")
+            if (context.Request["type"] == "dept")
             {
                 SelDeptInfo(context);
             }
@@ -57,7 +56,7 @@ namespace UI.Ashx
         {
             string deptName = context.Request["deptName"];
             //判断部门名称是否存在
-            if (BLL.DepartmentBLL.SelDeptByDname(deptName).Rows.Count==0)
+            if (BLL.DepartmentBLL.SelDeptByDname(deptName).Rows.Count == 0)
             {
                 if (BLL.DepartmentBLL.AddDept(deptName))
                 {
@@ -67,7 +66,7 @@ namespace UI.Ashx
                 else
                 {
                     //201：请求失败
-                    context.Response.Write(201);                   
+                    context.Response.Write(201);
                 }
             }
             else

@@ -35,7 +35,7 @@ function PostData() {
     var uPwd = $("#uPwd").val();
     var chk1 = $("#chkTrue").is(":checked");
     $.ajax({
-        url: '/UserLoginHandler.ashx',
+        url: '/Handler/UserLoginHandler.ashx',
         data: { type: "login", username: uName, userpwd: uPwd, chk1: chk1 },
         type: 'post',
         dataType: 'json',
@@ -65,7 +65,7 @@ function PostData() {
 */
 function getCookie() {
     $.ajax({
-        url: '/UserLoginHandler.ashx',
+        url: '/Handler/UserLoginHandler.ashx',
         data: { type: "cookie" },
         type: 'post',
         dataType: 'json',
