@@ -15,7 +15,7 @@
     <link href="Content/css/css/font-awesome/css/font-awesome.css" rel="stylesheet" />
     <link href="Content/css/css/jquery.gritter.css" rel="stylesheet" />
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css' />
-</head>
+</head>    
 <body> 
 
     <!--Header-part-->
