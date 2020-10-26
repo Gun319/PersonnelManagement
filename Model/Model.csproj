@@ -62,6 +62,7 @@
     <Compile Include="Department.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="EmpInfo.cs" />
     <Compile Include="Info.cs" />
     <Compile Include="Leave.cs">
       <DependentUpon>Model.tt</DependentUpon>

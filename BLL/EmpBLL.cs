@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Model;
 
 namespace BLL
 {
@@ -15,9 +16,9 @@ namespace BLL
         /// 查询员工信息
         /// </summary>
         /// <returns></returns>
-        public static List<dynamic> GetEmpInfo()
+        public static List<EmpInfo> GetEmpInfo(int DepartId, string UserName)
         {
-            return DAL.EmpDAL.GetEmpInfo();
+            return DAL.EmpDAL.GetEmpInfo(DepartId, UserName);
         }
     }
 }

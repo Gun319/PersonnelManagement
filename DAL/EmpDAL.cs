@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Dynamic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,26 +18,36 @@ namespace DAL
         /// 查询员工信息
         /// </summary>
         /// <returns></returns>
-        public static List<dynamic> GetEmpInfo()
+        public static List<EmpInfo> GetEmpInfo(int DepartId, string UserName)
         {
-            string sql = @"select UserID,UserName,DepartmentName,UserSex,UserAge,UserTel,DimissionTime,BasePay 
+            string sql = @"select UserID,UserNumber,UserName,DepartmentName,UserSex,UserAge,UserTel,DimissionTime,BasePay 
                             from UserInfo u,Department d where u.DepartmentID=d.DepartmentID";
-            DataTable dt = Helper.DBHelper.GetDataTable(sql, null);
-            List<dynamic> userInfos = new List<dynamic>();
+            if (DepartId != 0)
+                sql += " and u.DepartmentID=@DepartmentID";
+            if (!string.IsNullOrWhiteSpace(UserName))
+                sql += " and UserName=@UserName";
+            SqlParameter[] param = {
+                new SqlParameter("DepartmentID",DepartId),
+                new SqlParameter("UserName",UserName)
+            };
+            DataTable dt = Helper.DBHelper.GetDataTable(sql, param);
+
+            List<EmpInfo> userInfos = new List<EmpInfo>();
             foreach (DataRow item in dt.Rows)
             {
-                dynamic obj = new ExpandoObject();
-
-                obj.UserID = Convert.ToInt32(item["UserID"]);
-                obj.UserName = item["UserName"].ToString();
-                obj.DepartmentName = item["DepartmentName"].ToString();
-                obj.UserSex = Convert.ToInt32(item["UserSex"]);
-                obj.UserAge = Convert.ToInt32(item["UserAge"]);
-                obj.UserTel = item["UserTel"].ToString();
-                obj.DimissionTime = item["DimissionTime"];
-                obj.BasePay = item["BasePay"].ToString();
-
-                userInfos.Add(obj);
+                EmpInfo empInfo = new EmpInfo()
+                {
+                    UserID = Convert.ToInt32(item["UserID"]),
+                    UserNumber = item["UserNumber"].ToString(),
+                    UserName = item["UserName"].ToString(),
+                    DepartmentName = item["DepartmentName"].ToString(),
+                    UserSex = Convert.ToInt32(item["UserSex"]),
+                    UserAge = Convert.ToInt32(item["UserAge"]),
+                    UserTel = item["UserTel"].ToString(),
+                    DimissionTime = string.Format("{0:yyyy-MM-dd}", item["DimissionTime"]),
+                    BasePay = Convert.ToDouble(item["BasePay"]),
+                };
+                userInfos.Add(empInfo);
             }
             return userInfos;
         }

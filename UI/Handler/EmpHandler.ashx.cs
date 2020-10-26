@@ -17,12 +17,16 @@ namespace UI.Handler
         {
             //context.Response.ContentType = "text/plain";
             //context.Response.Write("Hello World");
-            GetEmpInfo(context);
+            if (context.Request["type"] == "SelEmp")
+                GetEmpInfo(context);
+
         }
 
         public void GetEmpInfo(HttpContext context)
         {
-            var EmpInfo = BLL.EmpBLL.GetEmpInfo();
+            int Dept = Convert.ToInt32(context.Request["Dept"]);
+            string name = context.Request["name"];
+            var EmpInfo = BLL.EmpBLL.GetEmpInfo(Dept, name);
             JavaScriptSerializer jss = new JavaScriptSerializer();
             string json = jss.Serialize(EmpInfo);
             context.Response.Write(json);

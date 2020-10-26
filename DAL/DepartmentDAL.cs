@@ -22,11 +22,12 @@ namespace DAL
             List<Department> dept = new List<Department>();
             foreach (DataRow item in dt.Rows)
             {
-                Department department = new Department()
+                Department department = new Department
                 {
                     DepartmentID = Convert.ToInt32(item["DepartmentID"]),
                     DepartmentName = item["DepartmentName"].ToString()
                 };
+
                 dept.Add(department);
             }
             return dept;
@@ -57,7 +58,7 @@ namespace DAL
             SqlParameter[] param = {
                 new SqlParameter("DepartmentName",deptName),
             };
-            return Helper.DBHelper.GetDataTable(sql,param);
+            return Helper.DBHelper.GetDataTable(sql, param);
         }
 
         /// <summary>
@@ -68,10 +69,10 @@ namespace DAL
         public static bool AddDept(string deptName)
         {
             string sql = @" insert into Department (DepartmentName) values(@DepartmentName) ";
-            SqlParameter[] param = { 
+            SqlParameter[] param = {
                 new SqlParameter("DepartmentName",deptName),
             };
-            return Helper.DBHelper.GetExcuteNonQuery(sql,param);
+            return Helper.DBHelper.GetExcuteNonQuery(sql, param);
         }
     }
 }

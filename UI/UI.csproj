@@ -111,9 +111,9 @@
     <Content Include="img\gritter.png" />
     <Content Include="img\hue.png" />
     <Content Include="img\ico\Add.png" />
-    <Content Include="img\ico\Del.png" />
     <Content Include="img\ico\Search.png" />
     <Content Include="img\ico\Update.png" />
+    <Content Include="img\ico\Del.png" />
     <Content Include="img\larrow.png" />
     <Content Include="img\line.png" />
     <Content Include="img\Login\bk-login.png" />
