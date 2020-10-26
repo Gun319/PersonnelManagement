@@ -132,6 +132,7 @@
     <Content Include="script\js\jquery.ui.custom.js" />
     <Content Include="script\js\matrix.js" />
     <Content Include="script\Login.js" />
+    <Content Include="SelColleagueInfo.aspx" />
     <Content Include="title.ico" />
     <Content Include="script\BootstrapJS\bootstrap.bundle.js" />
     <Content Include="script\BootstrapJS\bootstrap.bundle.min.js" />
@@ -179,6 +180,13 @@
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SelColleagueInfo.aspx.cs">
+      <DependentUpon>SelColleagueInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SelColleagueInfo.aspx.designer.cs">
+      <DependentUpon>SelColleagueInfo.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Bootstrap\bootstrap-grid.css.map" />

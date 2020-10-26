@@ -5,7 +5,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link href="title.ico" rel="icon" type="image/x-icon" />
     <title></title>
     <link href="Content/Bootstrap/bootstrap.min.css" rel="stylesheet" />
     <script src="script/jquery-3.4.1.min.js"></script>
@@ -14,6 +13,7 @@
         .empInfo {
             border: 1px solid #dee2e6;
         }
+
         .ico {
             line-height: 30px;
             border-right: 1px solid #DEDEDE;
@@ -40,7 +40,7 @@
                             <input type="text" id="empName" value="" placeholder="查询同事姓名" />
                         </div>
                         <div class="ml-3 d-inline-block">
-                            <button type="button" class="btn border">
+                            <button type="button" class="btn border" onclick="SelColleagueInfo()">
                                 <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
                                     <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
@@ -74,12 +74,16 @@
         SelColleagueInfo();
     })
 
-    //查看同事信息
+    /**
+     查看同事信息
+     */
     function SelColleagueInfo() {
+        var empName = $("#empName").val();
         $.ajax({
             url: "/Handler/EmpHandler.ashx",
             data: {
                 type: "ColleagueInfo",
+                empName: empName
             },
             type: "post",
             dataType: "json",
@@ -94,11 +98,27 @@
                         "<td>" + item["UserTel"] + "</td>" +
                         "<td>" + item["BasePay"] + "</td>" +
                         "<td>" + item["UserAddress"] + "</td>" +
-                        "<td>" + item["EntryTime"] + "</td>" +
+                        "<td>" + date(item["EntryTime"]) + "</td>" +
                         "</tr>";
                 })
-                $("#dTab tbody").append(str);
+                $("#dTab>tbody>tr").remove();
+                $("#dTab>tbody").append(str);
             }
         })
+    }
+
+    /**
+     日期格式转换
+    */
+    function date(item) {
+        var datalist = Number(item.substring(6, item.length - 2));
+        if (datalist.length == 10) {
+            datalist = datalist * 1000;
+        }
+        var date = new Date(datalist);
+        var y = date.getFullYear() + "-";
+        var m = ((date.getMonth() + 1) < 10 ? '0' + (date.getMonth() + 1) : (date.getMonth() + 1)) + "-";
+        var d = date.getDate();
+        return q = y + m + d;
     }
 </script>

@@ -20,5 +20,15 @@ namespace BLL
         {
             return DAL.EmpDAL.GetEmpInfo(DepartId, UserName);
         }
+
+        /// <summary>
+        /// 查看同事信息（可根据同事姓名查询）
+        /// </summary>
+        /// <param name="Name"></param>
+        /// <returns></returns>
+        public static List<UserInfo> SelColleagueInfo(string Name)
+        {
+            return DAL.EmpDAL.SelColleagueInfo(Name);
+        }
     }
 }

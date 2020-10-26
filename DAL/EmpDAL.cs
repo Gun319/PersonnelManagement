@@ -23,9 +23,9 @@ namespace DAL
             string sql = @"select UserID,UserNumber,UserName,DepartmentName,UserSex,UserAge,UserTel,DimissionTime,BasePay 
                             from UserInfo u,Department d where u.DepartmentID=d.DepartmentID";
             if (DepartId != 0)
-                sql += " and u.DepartmentID=@DepartmentID";
+                sql += @" and u.DepartmentID=@DepartmentID";
             if (!string.IsNullOrWhiteSpace(UserName))
-                sql += " and UserName=@UserName";
+                sql += @" and UserName=@UserName";
             SqlParameter[] param = {
                 new SqlParameter("DepartmentID",DepartId),
                 new SqlParameter("UserName",UserName)
@@ -50,6 +50,40 @@ namespace DAL
                 userInfos.Add(empInfo);
             }
             return userInfos;
+        }
+
+        /// <summary>
+        /// 查看同事信息（可根据同事姓名查询）
+        /// </summary>
+        /// <param name="Name"></param>
+        /// <returns></returns>
+        public static List<UserInfo> SelColleagueInfo(string Name)
+        {
+            string sql = @"select UserNumber,UserName,UserAge,UserSex,UserTel,BasePay,UserAddress,EntryTime from UserInfo";
+            if (!string.IsNullOrWhiteSpace(Name))
+                sql += @" where UserName=@UserName";
+            SqlParameter[] param = {
+                new SqlParameter("UserName",Name)
+            };
+            DataTable dt = Helper.DBHelper.GetDataTable(sql, param);
+
+            List<UserInfo> info = new List<UserInfo>();
+            foreach (DataRow item in dt.Rows)
+            {
+                UserInfo userInfo = new UserInfo()
+                {
+                    UserNumber = item["UserNumber"].ToString(),
+                    UserName = item["UserName"].ToString(),
+                    UserAge = Convert.ToInt32(item["UserAge"]),
+                    UserSex = Convert.ToByte(item["UserSex"]),
+                    UserTel = item["UserTel"].ToString(),
+                    BasePay = Convert.ToDecimal(item["BasePay"]),
+                    UserAddress = item["UserAddress"].ToString(),
+                    EntryTime = Convert.ToDateTime(item["EntryTime"])
+                };
+                info.Add(userInfo);
+            }
+            return info;
         }
     }
 }

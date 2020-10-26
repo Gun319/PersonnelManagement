@@ -47,7 +47,7 @@
             <li class="submenu active"><a href="#"><i class="icon icon-home"></i><span>员工资料管理</span></a>
                 <ul>
                     <li><a href="#" target="iframe_a">个人信息</a></li>
-                    <li><a href="#" target="iframe_a">查询同事信息</a></li>
+                    <li><a href="SelColleagueInfo.aspx" target="iframe_a">查询同事信息</a></li>
                     <li><a href="EmpManager.aspx" target="iframe_a">员工管理</a></li>
                 </ul>
             </li>

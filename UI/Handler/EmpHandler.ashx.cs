@@ -19,9 +19,14 @@ namespace UI.Handler
             //context.Response.Write("Hello World");
             if (context.Request["type"] == "SelEmp")
                 GetEmpInfo(context);
-
+            if (context.Request["type"] == "ColleagueInfo")
+                SelColleagueInfo(context);
         }
 
+        /// <summary>
+        /// 查询员工信息&条件查询
+        /// </summary>
+        /// <param name="context"></param>
         public void GetEmpInfo(HttpContext context)
         {
             int Dept = Convert.ToInt32(context.Request["Dept"]);
@@ -29,6 +34,19 @@ namespace UI.Handler
             var EmpInfo = BLL.EmpBLL.GetEmpInfo(Dept, name);
             JavaScriptSerializer jss = new JavaScriptSerializer();
             string json = jss.Serialize(EmpInfo);
+            context.Response.Write(json);
+        }
+
+        /// <summary>
+        /// 查询同事信息
+        /// </summary>
+        /// <param name="context"></param>
+        public void SelColleagueInfo(HttpContext context)
+        {
+            string name = context.Request["empName"];
+            var UserInfo = BLL.EmpBLL.SelColleagueInfo(name);
+            JavaScriptSerializer jss = new JavaScriptSerializer();
+            string json = jss.Serialize(UserInfo);
             context.Response.Write(json);
         }
 
