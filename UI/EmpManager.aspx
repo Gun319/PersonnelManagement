@@ -35,7 +35,7 @@
                 </div>
             </div>
 
-            <div class="empInfo text-center">
+            <div class="empInfo text-center mt-2">
                 <table class="table table-bordered" id="dTab">
                     <thead>
                         <tr>
@@ -84,3 +84,49 @@
     </div>
 </body>
 </html>
+<script>
+    $(() => {
+        DeptSelect();
+        SelEmp();
+    });
+
+    /**
+     部门下拉列表
+     */
+    function DeptSelect() {
+        $.ajax({
+            url: "/Handler/DepartmentHandler.ashx",
+            type: "post",
+            data: { type: "dept" },
+            dataType: "json",
+            success: (data) => {
+                $.each(data, (index, item) => {
+                    $("select").append("<option value=" + item["DepartmentID"] + ">" + item["DepartmentName"] + "</option>");
+                });
+            }
+        });
+    }
+
+    /**
+     员工信息 
+     */
+    function SelEmp() {
+        $.ajax({
+            url: "/Handler/EmpHandler.ashx",
+            type: "post",
+            data: {},
+            dataType: "json",
+            success: (data) => {
+                var str = "";
+                $.each(data, (index, item) => {
+                    str += `<tr>
+                                <td><input type="checkbox" value="`+ item["UserID"] + `" class="chk1" /></td>
+                                <td>`+ item["UserID"] + `</td>
+                            </tr>`;
+                });
+                $("#dTab>tbody>tr").remove();
+                $("#dTab>tbody").append(str);
+            }
+        });
+    }
+</script>

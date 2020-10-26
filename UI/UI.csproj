@@ -165,6 +165,9 @@
     <Compile Include="Fram.aspx.designer.cs">
       <DependentUpon>Fram.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Handler\EmpHandler.ashx.cs">
+      <DependentUpon>EmpHandler.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Handler\UserLoginHandler.ashx.cs">
       <DependentUpon>UserLoginHandler.ashx</DependentUpon>
     </Compile>
@@ -190,6 +193,7 @@
     <Content Include="Content\css\css\font-awesome\font\fontawesome-webfont.woff" />
     <Content Include="Handler\DepartmentHandler.ashx" />
     <Content Include="Handler\UserLoginHandler.ashx" />
+    <Content Include="Handler\EmpHandler.ashx" />
     <None Include="packages.config" />
     <Content Include="script\BootstrapJS\bootstrap.bundle.js.map" />
     <Content Include="script\BootstrapJS\bootstrap.bundle.min.js.map" />

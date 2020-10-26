@@ -380,4 +380,5 @@ select * from UserInfo
 --delete Department where DepartmentID =1
 --exec('delete Department where DepartmentID in (' +@DepartmentID+ ')')
 --select DepartmentName from Department where DepartmentName='行政部'
-insert into Department(DepartmentName,DepartmentRemarks) values('后勤部','')
+--insert into Department(DepartmentName,DepartmentRemarks) values('后勤部','')
+--select UserID,UserName,DepartmentName,UserSex,UserAge,UserTel,DimissionTime,BasePay from UserInfo u,Department d where u.DepartmentID=d.DepartmentID

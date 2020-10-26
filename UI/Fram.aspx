@@ -53,7 +53,7 @@
             </li>
 
             <!-- 请假管理 -->
-            <li class="submenu "><a href="#"><i class="icon icon-signal"></i><span>员工资料管理</span></a>
+            <li class="submenu "><a href="#"><i class="icon icon-signal"></i><span>请假管理</span></a>
                 <ul>
                     <li><a href="#" target="iframe_a">请假申请</a></li>
                     <li><a href="#" target="iframe_a">请假审批</a></li>
