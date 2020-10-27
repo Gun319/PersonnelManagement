@@ -18,6 +18,47 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css' />
 </head>
 <body>
+    <script type="text/javascript">
+        $(function () {
+
+        })
+
+        function EditPwd() {
+            $("#myModal").modal({ backdrop: "static" });
+        }
+    </script>
+    <%--修改密码模态框--%>
+        <div class="modal fade" id="myModal" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="myModalLabel">修改密码</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <span class="col-3">原密码：</span>
+                            <input class="col-8 form-control " id="orginalPwd" type="text" />
+                        </div>
+                        <div class="row">
+                            <span class="col-3">新密码：</span>
+                            <input class="col-8 form-control " id="newPwd" type="text" placeholder="请输入新密码" />
+                        </div>
+                        <div class="row">
+                            <span class="col-3">确认密码：</span>
+                            <input class="col-8 form-control " id="confirmPwd" type="text" placeholder="请确认密码" />
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-light" data-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-primary" onclick="AddDept()">修改</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%-- end modal --%>
 
     <!--Header-part-->
     <div id="header">
@@ -27,7 +68,8 @@
     <!--top-Header-menu-->
     <div id="user-nav" class="navbar navbar-inverse">
         <ul class="nav">
-            <li class=""><a title="" href="#"><i class="icon icon-cog"></i><span class="text">修改密码</span></a></li>
+            <%--修改密码--%>
+            <li class=""><a onclick="EditPwd()" title="" href="#"><i class="icon icon-cog"></i><span class="text">修改密码</span></a></li>
             <li class=""><a title="" href="Login.aspx"><i class="icon icon-share-alt"></i><span class="text">退出</span></a>
             </li>
         </ul>
