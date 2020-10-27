@@ -85,5 +85,59 @@ namespace DAL
             }
             return info;
         }
+
+        /// <summary>
+        /// 查看个人信息
+        /// </summary>
+        /// <param name="roleID"></param>
+        /// <param name="userID"></param>
+        /// <param name="userName"></param>
+        /// <returns></returns>
+        public static List<EmpInfo> SelPersonalInfo(int userID)
+        {
+            string sql = @" select UserName,DepartmentName,UserAge,UserSex,UserTel,UserAddress,EntryTime,BasePay,UserRemarks from UserInfo u,Department d where u.DepartmentID=d.DepartmentID and UserID=@UserID ";
+            SqlParameter[] param = { 
+                new SqlParameter("UserID",userID)
+            };
+            DataTable dt = Helper.DBHelper.GetDataTable(sql, param);
+            List<EmpInfo> info = new List<EmpInfo>();
+            foreach (DataRow item in dt.Rows)
+            {
+                EmpInfo empinfo = new EmpInfo
+                {
+                    UserName=item["UserName"].ToString(),
+                    DepartmentName = item["DepartmentName"].ToString(),
+                    UserAge = Convert.ToInt32(item["UserAge"]),
+                    UserSex = Convert.ToByte(item["UserSex"]),
+                    UserTel = item["UserTel"].ToString(),
+                    UserAddress = item["UserAddress"].ToString(),
+                    EntryTime = Convert.ToDateTime(item["EntryTime"]),
+                    BasePay = Convert.ToDouble(item["BasePay"]),
+                    UserRemarks = item["UserRemarks"].ToString()
+                };
+                info.Add(empinfo);
+            }
+            return info;
+        }
+
+        /// <summary>
+        /// 修改个人信息
+        /// </summary>
+        /// <param name="userInfo"></param>
+        /// <returns></returns>
+        public static bool EditPersonalInfo(UserInfo userInfo)
+        {
+            string sql = @" update UserInfo set UserName=@UserName,UserAge=@UserAge,UserSex=@UserSex,UserTel=@UserTel,UserAddress=@UserAddress,UserRemarks=@UserRemarks where UserID=@UserID ";
+            SqlParameter[] param = {
+                new SqlParameter("UserName",userInfo.UserName),
+                new SqlParameter("UserAge",userInfo.UserAge),
+                new SqlParameter("UserSex",userInfo.UserSex),
+                new SqlParameter("UserTel",userInfo.UserTel),
+                new SqlParameter("UserAddress",userInfo.UserAddress),
+                new SqlParameter("UserRemarks",userInfo.UserRemarks),
+                new SqlParameter("UserID",userInfo.UserID)
+            };
+            return Helper.DBHelper.GetExcuteNonQuery(sql,param);
+        }
     }
 }

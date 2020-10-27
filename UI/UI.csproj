@@ -89,6 +89,10 @@
     <Content Include="Content\css\Login.css" />
     <Content Include="DepartManager.aspx" />
     <Content Include="EmpManager.aspx" />
+    <Content Include="images\!images\body_bg.jpg" />
+    <Content Include="images\!images\page_searchbg.gif" />
+    <Content Include="images\!images\title_2.gif" />
+    <Content Include="images\!images\uploading.gif" />
     <Content Include="images\backgrounds\calActiveBg.html" />
     <Content Include="images\gallery\imgbox3.html" />
     <Content Include="img\alpha.html" />
@@ -125,7 +129,9 @@
     <Content Include="img\spinner.gif" />
     <Content Include="img\sprite.png" />
     <Content Include="Fram.aspx" />
+    <Content Include="img\Upload\default.png" />
     <Content Include="Login.aspx" />
+    <Content Include="PersonalInfo.aspx" />
     <Content Include="script\DepartManager.js" />
     <Content Include="script\js\bootstrap.min.js" />
     <Content Include="script\js\jquery.min.js" />
@@ -178,6 +184,13 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PersonalInfo.aspx.cs">
+      <DependentUpon>PersonalInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PersonalInfo.aspx.designer.cs">
+      <DependentUpon>PersonalInfo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SelColleagueInfo.aspx.cs">

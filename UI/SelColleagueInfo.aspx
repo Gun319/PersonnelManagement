@@ -94,7 +94,7 @@
                         "<td>" + item["UserNumber"] + "</td>" +
                         "<td>" + item["UserName"] + "</td>" +
                         "<td>" + item["UserAge"] + "</td>" +
-                        "<td>" + item["UserSex"] + "</td>" +
+                        "<td>" + (item["UserSex"]==1?"男":"女") + "</td>" +
                         "<td>" + item["UserTel"] + "</td>" +
                         "<td>" + item["BasePay"] + "</td>" +
                         "<td>" + item["UserAddress"] + "</td>" +

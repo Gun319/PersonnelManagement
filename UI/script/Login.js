@@ -43,7 +43,8 @@ function PostData() {
             if (data != 201) {
                 $.each(data, (index, item) => { //角色 RoleID (1.总经理 2.人事经理 3.人事助理 4.部门经理 5.员工)
                     if (item["RoleID"] == 1)
-                        alert('总经理');
+                        //alert('总经理');
+                        //window.location.href("PersonalInfo.aspx");
                     if (item["RoleID"] == 2)
                         alert('人事经理');
                     if (item["RoleID"] == 3)

@@ -46,7 +46,7 @@
             <!-- 员工管理 -->
             <li class="submenu active"><a href="#"><i class="icon icon-home"></i><span>员工资料管理</span></a>
                 <ul>
-                    <li><a href="#" target="iframe_a">个人信息</a></li>
+                    <li><a href="PersonalInfo.aspx" target="iframe_a">个人信息</a></li>
                     <li><a href="SelColleagueInfo.aspx" target="iframe_a">查询同事信息</a></li>
                     <li><a href="EmpManager.aspx" target="iframe_a">员工管理</a></li>
                 </ul>
@@ -130,7 +130,7 @@
             <!-- 子页面内容 -->
 
             <%--scrolling="no"消除边框     height:calc(100vh) 获取屏幕高度 <100vh>屏幕高度100% --%>
-            <iframe src="EmpManager.aspx" name="iframe_a" style="border: 0; width: 100%; height: calc(100vh)"></iframe>
+            <iframe src="PersonalInfo.aspx" name="iframe_a" style="border: 0; width: 100%; height: calc(100vh)"></iframe>
         </div>
     </div>
 

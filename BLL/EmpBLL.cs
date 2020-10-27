@@ -30,5 +30,24 @@ namespace BLL
         {
             return DAL.EmpDAL.SelColleagueInfo(Name);
         }
+
+        /// <summary>
+        /// 查看个人信息
+        /// </summary>
+        /// <returns></returns>
+        public static List<EmpInfo> SelPersonalInfo(int userID)
+        {
+            return DAL.EmpDAL.SelPersonalInfo(userID);
+        }
+
+        /// <summary>
+        /// 修改个人信息
+        /// </summary>
+        /// <param name="userInfo"></param>
+        /// <returns></returns>
+        public static bool EditPersonalInfo(UserInfo userInfo)
+        {
+            return DAL.EmpDAL.EditPersonalInfo(userInfo);
+        }
     }
 }

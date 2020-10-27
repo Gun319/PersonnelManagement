@@ -382,3 +382,7 @@ select * from UserInfo
 --select DepartmentName from Department where DepartmentName='行政部'
 --insert into Department(DepartmentName,DepartmentRemarks) values('后勤部','')
 --select UserID,UserName,DepartmentName,UserSex,UserAge,UserTel,DimissionTime,BasePay from UserInfo u,Department d where u.DepartmentID=d.DepartmentID
+--select UserName,DepartmentName,UserAge,UserSex,UserTel,UserAddress,EntryTime,BasePay,UserRemarks from UserInfo u,Department d where u.DepartmentID=d.DepartmentID and RoleID=1 and UserID=9 and LoginName='admin17'
+update UserInfo set UserName='廖洪四',UserAge=19,UserSex=1,UserTel='12121212122',UserAddress='湖南娄底',UserRemarks='从来无所求，所得接惊喜！' where RoleID=1 and UserID=9 and LoginName='admin17'
+
+

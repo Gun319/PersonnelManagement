@@ -17,5 +17,8 @@ namespace Model
         public string UserTel { get; set; }
         public string DimissionTime { get; set; }
         public double BasePay { get; set; }
+        public string UserAddress { get; set; }
+        public DateTime EntryTime { get; set; }
+        public string UserRemarks { get; set; }
     }
 }
